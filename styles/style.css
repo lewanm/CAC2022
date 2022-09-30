@@ -16,7 +16,7 @@ a {
   color: black;
 }
 
-nav {
+header {
   background-color: var(--light-color);
   height: 96px;
 
@@ -25,14 +25,14 @@ nav {
   align-items: center;
 }
 
-nav .buttons {
+header .buttons {
   font-family: var(--main-font);
   font-weight: 700;
   font-size: 32px;
   margin-right: 5px;
 }
 
-nav .buttons a {
+header .buttons a {
   margin: 0px 10px;
 }
 

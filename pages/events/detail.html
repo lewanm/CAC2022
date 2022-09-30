@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<!-- ESTE HTML, ES UNO DE EJEMPLO PARA MAQUETARLO, EN LA CARPETA PAGES, SE VAN A GUARDAR TODOS LOS EVENTOS-->
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,47 +15,53 @@
 </head>
 
 <body>
-    <nav>
+    <header id="header">
         <div class="buttons">
             <a href="/pages/home">Home</a>
             <a href="/pages/about">About us</a>
             <a href="/pages/events">Events</a>
             <a href="/pages/contact.html">Contact</a>
         </div>
-    </nav>
+    </header>
 
-    <div class="image-container">
-        <img 
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/681px-Placeholder_view_vector.svg.png"
-            alt="placeholder event image">
-    </div>
-
-    <div class="grid-container">
-        <div class="detail-container">
-            <p class="detail-tittle">Detalle</p>
-            <p class="detail-ticket">Con entrada: Si</p>
-            <p class="detail-price">precio $530</p>
-            <p class="detail-date">El dia: 26/10</p>
-            <p class="detail-time">A las: 9:00 pm</p>
-            <p class="detail-description">Te invitamos a subir al Mirador de la Galería Güemes. Nos encontramos minutos antes en la Entrada Mitre. Florida 165 debajo de la primer Cúpula frente a los ascensores. Costo por persona 700 pesos, duración 40 minutos y cupo máximo 20 personas</p>
+    <section>
+        <div class="image-container">
+            <img 
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/681px-Placeholder_view_vector.svg.png"
+                alt="placeholder event image">
         </div>
-        <div class="weather-container">
-            <p class="weather">ACA VA A IR LA API DEL CLIMA</p>
-        </div>
-        <div class="map-container">
-            <iframe class="map"
-                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13136.160209054275!2d-58.410841!3d-34.6031487!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xfc0cf5c054da4aa1!2sAbasto%20Shopping!5e0!3m2!1ses-419!2sar!4v1664474654293!5m2!1ses-419!2sar" 
-                style="border:0;" 
-                allowfullscreen="" 
-                loading="lazy" 
-                referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-            <div class="address">
-                <h2>Shopping Abasto</h2>
-                <h3>Dirección: Av. corrientes 3247, CABA</h3>
+    
+        <article class="grid-container">
+            
+            <div class="detail-container">
+                <p class="detail-tittle">Detalle</p>
+                <p class="detail-ticket">Con entrada: Si</p>
+                <p class="detail-price">precio $530</p>
+                <p class="detail-date">El dia: 26/10</p>
+                <p class="detail-time">A las: 9:00 pm</p>
+                <p class="detail-description">Te invitamos a subir al Mirador de la Galería Güemes. Nos encontramos minutos antes en la Entrada Mitre. Florida 165 debajo de la primer Cúpula frente a los ascensores. Costo por persona 700 pesos, duración 40 minutos y cupo máximo 20 personas</p>
             </div>
-        </div>
-    </div>
+    
+            <div class="weather-container">
+                <p class="weather">ACA VA A IR LA API DEL CLIMA</p>
+            </div>
+    
+            <div class="map-container">
+                <iframe class="map"
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13136.160209054275!2d-58.410841!3d-34.6031487!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xfc0cf5c054da4aa1!2sAbasto%20Shopping!5e0!3m2!1ses-419!2sar!4v1664474654293!5m2!1ses-419!2sar" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+                <div class="address">
+                    <h2>Shopping Abasto</h2>
+                    <h3>Dirección: Av. corrientes 3247, CABA</h3>
+                </div>
+            </div>
+    
+        </article>
+    </section>
 </body>
 
 </html>
