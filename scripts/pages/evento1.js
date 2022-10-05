@@ -1,7 +1,11 @@
-import detail from '../components/detailCard.js'
-import map from '../components/mapCard.js'
-import weather from '../components/weatherCard.js'
-import image from '../components/imageCard.js'
+import detail from '../components/events/detailCard.js'
+import map from '../components/events/mapCard.js'
+import weather from '../components/events/weatherCard.js'
+import image from '../components/events/imageCard.js'
+
+import {formateDate} from '../utils/date.js'
+import {obtainCoordinates} from '../utils/coordenates.js'
+
 
 const imgData = {
     'url' : "https://upload.wikimedia.org/wikipedia/commons/d/db/Abasto_de_Buenos_Aires.jpg",
@@ -11,8 +15,7 @@ const imgData = {
 const detailData = {
     'entrada' : false,
     'precio' : null,
-    'fecha' : '25/10',
-    'hora' : '9:00pm',
+    'fecha' : "2022-10-07T21:00:00.000Z",
     'descripcion' : 'Te invitamos a subir al Mirador de la Galería Güemes. Nos encontramos minutos antes en la Entrada Mitre. Florida 165 debajo de la primer Cúpula frente a los ascensores. Costo por persona 700 pesos, duración 40 minutos y cupo máximo 20 personas'
 }
 
@@ -23,10 +26,13 @@ const mapData = {
     'localidad' : 'CABA',
 }
 
-const weatherData = {}
+const weatherData = {
+    'coordinates' : mapData.url  ? obtainCoordinates(mapData.url) : "Error",
+    'date' : formateDate(detailData.fecha)
+}
 
 document.getElementById("image").innerHTML= image(imgData)
 document.getElementById("detail").innerHTML= detail(detailData)
-document.getElementById("weather").innerHTML = weather(weatherData)
+document.getElementById("weather").innerHTML = await weather(weatherData)
 document.getElementById("map").innerHTML = map(mapData)
 

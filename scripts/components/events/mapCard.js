@@ -10,9 +10,9 @@ export default function map(data){
         loading="lazy" 
         referrerpolicy="no-referrer-when-downgrade">
         </iframe>
-        <div class="address">
-        <h2>${data.lugar}</h2>
-        <h3>Dirección: ${data.direccion}, ${data.localidad} </h3>
+        <div class="address-container">
+        <p class="adress-name">${data.lugar}</p>
+        <p class="adress">Dirección: ${data.direccion}, ${data.localidad} </p>
         </div>`
     )
 }
