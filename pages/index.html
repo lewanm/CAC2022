@@ -5,23 +5,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/form.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+
     <title>Formularios</title>
 </head>
 
 <body>
+    <header id="header"></header>
+
     <div class="form-container">
-        <h2>Ponte en contacto</h2>
         <form >
+            <div class="tittle">
+                <h2>Ponte en contacto</h2>
+            </div>
             <div id="info-container"></div>
-            <div id="reason-container"></div>
-            <div id="reason-detail-container"></div>
+            <div class="cambiarNombre">
+                <div id="reason-container"></div>
+                <div id="reason-detail-container"></div>
+            </div>
             <div id="comment-container"></div>
             <div id="send-button-container"></div>
         </form>
-
     </div>
+
     <script type="module" src="../scripts/pages/form.js"></script>
     <script src="../scripts/utils/formFunctions.js"></script>
+    <script src="../../scripts/components/header-Footer.js"></script>
+
 </body>
 
 </html>

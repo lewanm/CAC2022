@@ -35,6 +35,8 @@ function obtainRadioValue(){
         }
     }
 
+    console.log(value)
+
     return parseInt(value)
 }
 
