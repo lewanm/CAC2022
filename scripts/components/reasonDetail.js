@@ -6,6 +6,6 @@ export default function ReasonDetail(){
         <option value="null">Seleccione una opcion</option>
     </select>
     `
-
+    //las opciones del select se hacen con el otro script 
     return(labels)
 }
