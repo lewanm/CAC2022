@@ -12,8 +12,10 @@ const url = `http://www.7timer.info/bin/civillight.php?lon=[${weatherData.coordi
   function setWeatherData(min, max, weather){
     return(     
       `
-    <img class="weather-img"src="https://cdn-icons-png.flaticon.com/512/14/14868.png" alt="WEA">
-    <p class="weather-name"> ${weather}</p>
+    <div class="icon-weather-name-container">
+      <img class="weather-img"src="https://cdn-icons-png.flaticon.com/512/14/14868.png" alt="WEA">
+      <p class="weather-name"> ${weather}</p>
+    </div>
     <div class="temperature-container">
       <p class="weather-max"> max: ${max} </p>
       <p class="weather-min"> min: ${min} </p>
@@ -30,10 +32,12 @@ const url = `http://www.7timer.info/bin/civillight.php?lon=[${weatherData.coordi
       //cambiar tambien este, leer de abajo para arriba
     const [finalData, jsonError] = await promiseHandler(
       data.json()
-      )
-      if (jsonError) throw new Error(jsonError)
+    )
+
+    if (jsonError) throw new Error(jsonError)
       //por ultimo este, NO LEAS ESTE SEGUNDO
     const requestedWeather = finalData.dataseries.find( weather => weather.date == weatherData.date)
+    
     if (!requestedWeather) alert("El dia seleccionado no existe")
     //cambiar por ventana modal
 
