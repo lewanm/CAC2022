@@ -9,51 +9,19 @@
 </head>
 
 <body>
-    <h2>Ponte en contacto</h2>
-    <form>
-        <label for="nombre">Nombre: </label>
-        <input size="30" type="text" name="nombre"placeholder="Ingrese su nombre aqui..."> 
-        <br>
-        <br>
+    <div class="form-container">
+        <h2>Ponte en contacto</h2>
+        <form >
+            <div id="info"></div>
+            <div id="reason"></div>
+            <div id="reason-detail"></div>
+            <div id="comment"></div>
+            <div id="send-button"></div>
+        </form>
 
-        <label for="email">Email:</label>
-        <input type="email" name="email" placeholder="Ingrese su dirección aqui...">
-        <br>
-        <br>
-        
-        <label for="telefono">Telefono: </label>
-        <input type="tel" name="telefono"placeholder="ingrese su telefono aqui ...."> 
-
-        <p id="radio-selector" ONCHANGE="modifySelect()">
-            Seleccione un motivo: 
-            <br>
-            <input type="radio" name="motivo" value="1"> Consulta
-            <br>
-            <input type="radio" name="motivo" value="2"> Sugerencia
-            <br>
-            <input type="radio" name="motivo" value="3"> Queja
-        </p>
-
-        <label for="completar">Seleccione una opción</label>
-        <br>
-        <select id="completar" name="completar" >
-            <option value="null">Seleccione un motivo</option>
-        </select>
-
-        <p> usamos un checkbox?
-            <br>
-            <input type="checkbox" name="placeholder" value="value"> VALUE
-        </p>
-
-        <label for="comentarios">Comentarios:</label> 
-        <br>
-        <textarea name="comentarios" rows="10" cols="30"></textarea>
-        
-        <br>
-        <input type="submit" value="Enviar">
-    </form>
-
-    <script src="../scripts/form.js"></script>
+    </div>
+    <!-- <script type="module" src="../scripts/pages/form.js"></script> -->
+    <script type="module" src="prueba.js"></script>
 </body>
 
 </html>
