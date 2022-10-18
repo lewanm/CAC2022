@@ -14,14 +14,15 @@
   --navbar-light: #723d46;
   --navbar-dark: #472d30;
   --font-color: white;
+  --header-height: 50px;
 }
 
 .buttons {
   background-color: var(--navbar-light);
+  height: var(--header-height);
   width: 100%;
 }
 
 .buttons a {
   color: var(--font-color);
-  line-height: 40px;
 }
