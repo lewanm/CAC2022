@@ -3,7 +3,7 @@ const labels = `
     <a id="home" href="/pages/home">Home</a>
     <a id="about" href="/pages/about">About us</a>
     <a id="events" href="/pages/events">Events</a>
-    <a id="contact" href="/pages/contact.html">Contact</a>
+    <a id="contact" href="/pages/form.html">Contact</a>
 </nav>
 `
 
