@@ -3,8 +3,8 @@ import map from '../components/events/mapCard.js'
 import weather from '../components/events/weatherCard.js'
 import image from '../components/events/imageCard.js'
 
-import {formateDate} from '../utils/date.js'
-import {obtainCoordinates} from '../utils/coordenates.js'
+import {formateDate} from '../utils/weather/date.js'
+import {obtainCoordinates} from '../utils/weather/coordenates.js'
 
 
 const imgData = {
@@ -15,7 +15,7 @@ const imgData = {
 const detailData = {
     'entrada' : false,
     'precio' : null,
-    'fecha' : "2022-10-20T21:00:00.000Z",
+    'fecha' : "2022-10-23T21:00:00.000Z",
     'descripcion' : 'Te invitamos a subir al Mirador de la Galería Güemes. Nos encontramos minutos antes en la Entrada Mitre. Florida 165 debajo de la primer Cúpula frente a los ascensores. Costo por persona 700 pesos, duración 40 minutos y cupo máximo 20 personas'
 }
 

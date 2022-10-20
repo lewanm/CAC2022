@@ -38,7 +38,7 @@ img {
   background-color: var(--main-bg-light);
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 479px) {
   .event-container article {
     width: 100vw;
     display: flex;
@@ -107,5 +107,15 @@ img {
 
     display: flex;
     justify-content: space-around;
+  }
+
+  .desktop {
+    font-size: 0;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .mobile {
+    font-size: 0;
   }
 }

@@ -1,20 +1,16 @@
 import promiseHandler from "../../utils/promises.js"; 
+import {getWeatherIndex, getWeather} from "../../utils/weather/weatherCardUtils.js"
 
 export default async function weather(weatherData){
 
-const url = `http://www.7timer.info/bin/civillight.php?lon=[${weatherData.coordinates.lon}]&lat=[${weatherData.coordinates.lat}]&ac=0&unit=metric&output=json`
+const url = `https://api.open-meteo.com/v1/forecast?latitude=${weatherData.coordinates.lat}&longitude=${weatherData.coordinates.lon}&timezone=auto&daily=temperature_2m_max,temperature_2m_min,weathercode`
 
-  const options = {
-    method: 'GET',
-  };
-
-
-  function setWeatherData(min, max, weather){
+  function setWeatherData(min, max, weatherAndIcon){
     return(     
       `
-    <div class="icon-weather-name-container">
-      <img class="weather-img"src="https://cdn-icons-png.flaticon.com/512/14/14868.png" alt="WEA">
-      <p class="weather-name"> ${weather}</p>
+      <div class="icon-weather-name-container">
+      <img class="weather-img"src="${weatherAndIcon.icon}" alt="${weatherAndIcon.weather}">
+      <p class="weather-name">${weatherAndIcon.weather}</p>
     </div>
     <div class="temperature-container">
       <p class="weather-max"> max: ${max} </p>
@@ -36,16 +32,17 @@ const url = `http://www.7timer.info/bin/civillight.php?lon=[${weatherData.coordi
 
     if (jsonError) throw new Error(jsonError)
       //por ultimo este, NO LEAS ESTE SEGUNDO
-    const requestedWeather = finalData.dataseries.find( weather => weather.date == weatherData.date)
-    
-    if (!requestedWeather) alert("El dia seleccionado no existe")
+
+    //obtengo el indice del dia del evento
+    const requestedWeatherIndex = getWeatherIndex(finalData,weatherData)
+    if (!requestedWeatherIndex) alert("El dia seleccionado no existe")
     //cambiar por ventana modal
 
-    const min = requestedWeather.temp2m.min
-    const max = requestedWeather.temp2m.max
-    const weather = requestedWeather.weather
+    const weatherAndIcon = getWeather(finalData.daily.weathercode[requestedWeatherIndex])
+    const max = finalData.daily.temperature_2m_max[requestedWeatherIndex]
+    const min = finalData.daily.temperature_2m_min[requestedWeatherIndex]
 
-    return setWeatherData(min,max,weather)
+    return setWeatherData(min,max,weatherAndIcon)
   }
   return await getData(url)
 
