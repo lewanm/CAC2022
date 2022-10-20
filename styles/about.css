@@ -1,0 +1,94 @@
+@import url("general.css");
+
+.imagen {
+  background-color: var(--main-bg-light);
+}
+
+.texto {
+  background-color: var(--main-bg-color);
+  padding: 15px;
+}
+
+@media (max-width: 479px) {
+  .buttons {
+    position: fixed;
+    bottom: 0;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .about-container {
+    height: calc(100% - var(--header-height));
+    width: 100vw;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .about-container > * {
+    margin-top: 20px;
+  }
+
+  .imagen {
+    width: 80vw;
+
+    display: flex;
+    align-items: center;
+  }
+
+  .texto {
+    width: calc(80vw - 30px);
+
+    display: flex;
+    align-items: center;
+
+    margin-bottom: calc(var(--header-height) + 20px);
+  }
+}
+
+@media (min-width: 480px) {
+  .buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .buttons a {
+    margin: 0 10px;
+  }
+
+  .about-container {
+    height: calc(100vh - var(--header-height));
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .imagen {
+    height: 60vh;
+    width: 40vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .imagen > * {
+    width: 100%;
+    max-width: 400px;
+    max-height: 100%;
+  }
+
+  .texto {
+    height: 70vh;
+    width: 40vw;
+
+    display: flex;
+
+    align-items: flex-start;
+    overflow: auto;
+  }
+}
