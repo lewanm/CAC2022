@@ -1,4 +1,4 @@
-import getSlideshow from "../components/getSlideshow.js"
+import getSlideshow from "../components/home/getSlideshow.js"
 
 
 //ya que esto no lo traigo de un endpoint y es hardcodeado, tiene que tener las imagenes en la carpeta
@@ -19,5 +19,4 @@ const imagesData = [
     },
 ]
 
-const a = document.getElementById("slide-container")
-a.innerHTML = getSlideshow(imagesData)
+document.getElementById("slide-container").innerHTML = getSlideshow(imagesData)

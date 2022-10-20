@@ -1,5 +1,6 @@
 export default function getSlideshow(data){
 
+    console.log(data)
     let finalString = 
     `
     <div id="slides" class="ms-slides" data-delay="8000" data-transition="600">
@@ -15,7 +16,7 @@ export default function getSlideshow(data){
         `</div>
 
         <ol class="ms-slides__indicators"></ol>
-        <!-- Show Next and Previous Buttons -->
+
         <a href="#" class="ms-slides__next-button"></a>
         <a href="#" class="ms-slides__prev-button"></a>
     </div>`
