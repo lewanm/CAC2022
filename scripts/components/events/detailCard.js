@@ -4,6 +4,7 @@ export default function detail(data){
     const year = date.getFullYear()
     const month = ("0"+(date.getMonth() + 1 )).slice(-2)
     const day = ("0"+(date.getDate())).slice(-2)
+    const hours = date.getHours()+":00"
 
     return(
 
@@ -16,7 +17,7 @@ export default function detail(data){
                 </tr>
                 <tr>
                     <td><p class="detail-date">El dia: ${day}/${month}/${year} </p></td>
-                    <td><p class="detail-time">A las: ${data.hora}</p></td>
+                    <td><p class="detail-time">A las: ${hours}</p></td>
                 </tr>
                 <tr>
                     <td class="detail" colspan="2"><p class="detail-description">${data.descripcion}</p></td>

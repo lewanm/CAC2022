@@ -19,13 +19,15 @@
 
   --header-height: 50px;
   --border-radius: 20px;
+  --border-radius-top: 20px 20px 0 0;
+  --border-radius-bottom: 0 0 20px 20px;
   --card-margin: 30px;
 }
 
 header .buttons {
   background-color: var(--navbar-light);
   height: var(--header-height);
-  width: 100%;
+  width: 100vw;
 }
 
 header .buttons a {
