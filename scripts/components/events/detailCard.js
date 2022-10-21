@@ -19,7 +19,7 @@ export default function detail(data){
                     <td><p class="detail-time">A las: ${data.hora}</p></td>
                 </tr>
                 <tr>
-                    <td colspan="2"><p class="detail-description">${data.descripcion}</p></td>
+                    <td class="detail" colspan="2"><p class="detail-description">${data.descripcion}</p></td>
                 </tr>
             </tbody>
         </table>`

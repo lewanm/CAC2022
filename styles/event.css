@@ -1,30 +1,7 @@
-* {
-  margin: 0;
-  padding: 0;
-  border: none;
-  text-decoration: none;
-  font-family: "Raleway", sans-serif;
-}
+@import url("general.css");
 
-:root {
-  --main-bg-color: #c9cba3;
-  --main-bg-light: #ffe1a8;
-  --navbar-light: #723d46;
-  --navbar-dark: #472d30;
-  --font-color: white;
-}
-
-.buttons {
-  background-color: var(--navbar-light);
-  width: 100%;
-}
-
-.buttons a {
-  color: var(--font-color);
-  line-height: 40px;
-}
-
-img {
+.image-container img,
+.map {
   width: 80vw;
   border-radius: 20px 20px 0 0;
 }
@@ -38,7 +15,7 @@ img {
   background-color: var(--main-bg-light);
 }
 
-@media screen and (max-width: 479px) {
+@media screen and (max-width: 480px) {
   .event-container article {
     width: 100vw;
     display: flex;
@@ -49,18 +26,21 @@ img {
   .img-details-container,
   .weather-container,
   .map-container {
-    border-radius: 20px;
+    border-radius: var(--border-radius);
     width: 80vw;
-    margin-top: 20px;
-  }
-  .map {
-    border-radius: 20px 20px 0 0;
-    width: 80vw;
+    margin-top: var(--card-margin);
   }
 
-  .detail-container,
+  .map-container {
+    margin-bottom: calc(var(--header-height) + var(--card-margin));
+  }
+
   .address-container {
     padding: 10px 15px 15px;
+  }
+
+  .detail-container {
+    padding-top: 10px;
   }
 
   .table-detail {
@@ -90,15 +70,11 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    margin-left: 30%;
+    margin: 0 auto;
   }
 
   .weather-img {
     width: 40vw;
-  }
-
-  .map-container {
-    margin-bottom: 50px;
   }
 
   .buttons {
@@ -106,16 +82,28 @@ img {
     bottom: 0;
 
     display: flex;
+    flex-direction: row;
+    align-items: center;
     justify-content: space-around;
   }
 
+  .buttons a svg {
+    width: 25px;
+    height: 25px;
+    fill: var(--font-color);
+  }
+
+  .buttons a svg:hover {
+    fill: var(--font-color-selected);
+  }
+
   .desktop {
-    font-size: 0;
+    display: none;
   }
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 481px) {
   .mobile {
-    font-size: 0;
+    display: none;
   }
 }

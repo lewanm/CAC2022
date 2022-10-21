@@ -12,11 +12,20 @@ const imgData = {
     'alt' : "placeholder event image"
 }
 
+//aca voy a indicar el dia a "MAÑANA" ya que la API que use tiene hasta 7 dias, para no seguir modificando este archivo
+//preferi dejarlo de esta forma
+
+function getDate(days){
+    const tomorrow = new Date()
+    tomorrow.setDate(tomorrow.getDate() + days )
+    return tomorrow.toISOString()
+}
+
 const detailData = {
     'entrada' : false,
     'precio' : null,
-    'fecha' : "2022-10-23T21:00:00.000Z",
-    'descripcion' : 'Te invitamos a subir al Mirador de la Galería Güemes. Nos encontramos minutos antes en la Entrada Mitre. Florida 165 debajo de la primer Cúpula frente a los ascensores. Costo por persona 700 pesos, duración 40 minutos y cupo máximo 20 personas'
+    'fecha' : getDate(4),
+    'descripcion' : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia in ea sapiente soluta debitis, repudiandae maiores nostrum, amet quasi qui exercitationem odit saepe magni provident repellat molestiae, commodi asperiores corporis? Exercitationem eum dicta quibusdam harum nulla sapiente porro voluptate perspiciatis, tempore natus magnam vel ducimus blanditiis um dicta quibusdam harum nulla sapiente porro voluptate perspiciatis, tempore natus magnam vel ducimus blanditiis.'
 }
 
 const mapData = {
