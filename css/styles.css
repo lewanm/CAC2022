@@ -1,0 +1,33 @@
+.FlexContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    align-content: flex-end;
+    width: 65%;
+    background-color: steelblue;
+    height: 80vh;
+    overflow: auto;
+    flex-direction: row;
+}
+
+.FlexContainer div {
+    width: 15rem;
+    height: 19rem;
+    margin: 40px;
+}
+
+body {
+    background-color: steelblue;
+    font-family: Calibri, 'Quicksand';
+}
+
+h1 {
+    color: white;
+    background-color: black;
+}
+
+.Eventos {
+    color: white;
+    font-weight: bold;
+}
