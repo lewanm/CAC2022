@@ -1,18 +1,49 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-  <title>Homepage</title>
-  <link rel="stylesheet" href="../styles/general.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/slideshow.css">
+    <link rel="stylesheet" href="../styles/home.css">
+    <title>Home</title>
 </head>
 
 <body>
 
   <header id="header"></header>
+  <!-- Fuente Slideshow
+  Fuente: https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_slideshow_caption -->
+  <article>
 
-  <iframe width="800" height="600" src="https://www.onlinemania.es/file.php?f=11242&iframe=1" frameborder="0"></iframe>
 
-  <script src="../scripts/components/header-footer.js"></script>
+    <section class="slide-section">
+      <div class="general-slide-container"></div>
+    </section>
+
+    <section class="event-section">
+      <div class="events-container">
+
+        <div class="event">
+          <a href="eventoEj1.html">
+            <img src="/resources/images/image2.png" alt="">
+            <p class="tittle">Titulo</p>
+          </a>
+        </div>
+        
+      </div>
+    </section>
+  </article>
+  
+
+
+
+  <script src="scripts/pages/home.js"></script>
+  <script src="../../scripts/components/header-Footer.js"></script>
+  <script src="scripts/utils/home/slideshow.js"></script>
+
 </body>
-
 </html>
+
+         
