@@ -3,38 +3,35 @@
 //ya que esto no lo traigo de un endpoint y es hardcodeado, tiene que tener las imagenes en la carpeta
 //resources -> images
 
-
-let evento1,evento2,evento3,evento4
-
 const eventData = [
     evento1 = {
-        'eventName':"Evento del Abasto UwU",
-        'eventPage':'eventoEj1.html',
-        'image' : 'image1.png',
+        'eventName':"Festival del asado",
+        'eventPage':'evento1.html',
+        'image' : "asado.webp",
         'imageAlt' : 'placeholder alt'
     },
     evento2 = {
-        'eventName':"Evento del Jardin Japones",
-        'eventPage':'eventoEj1.html',
-        'image' : 'image2.png',
+        'eventName':"Tokyo Game Show",
+        'eventPage':'evento1.html',
+        'image' : "tkg.jpeg",
         'imageAlt' : 'placeholder alt'
     },
     evento3 = {
-        'eventName':"Evento del Planetario",
-        'eventPage':'eventoEj1.html',
-        'image' : 'image3.png',
+        'eventName':"Feliz cumple Planetario!",
+        'eventPage':'evento1.html',
+        'image' : "planetario.jpg",
         'imageAlt' : 'placeholder alt'
     },
     evento4 = {
-        'eventName':"Evento Calamuchita",
-        'eventPage':'eventoEj1.html',
-        'image' : 'image2.png',
+        'eventName':"Haloween 2022",
+        'eventPage':'evento1.html',
+        'image' : "haloween.jpg",
         'imageAlt' : 'placeholder alt'
     },
     evento5 = {
-        'eventName':"Evento Calamuchita",
-        'eventPage':'eventoEj1.html',
-        'image' : 'image2.png',
+        'eventName':"Evento ejemplo",
+        'eventPage':'evento1.html',
+        'image' : "imagen1.png",
         'imageAlt' : 'placeholder alt'
     },
 ]
@@ -46,10 +43,10 @@ const slideShow = (data) => {
 
     let events = ""
 
-    for (let i = 3; i < data.length; i++){
+    for (let i = 0; i < 3 ; i++){
         events += `<div class="container slides">
     <a href="${data[i].eventPage}">
-        <img class="slide-img" src="resources/images/${data[i].image}" alt="${data[i].imageAlt}">
+        <img class="slide-img" src="resources/images/events/${data[i].image}" alt="${data[i].imageAlt}">
     </a>
     <div class="img-txt">
           ${data[i].eventName}
@@ -67,12 +64,12 @@ const eventGalery = (data) => {
 
     let events = ""
 
-    for (let data of eventData){
+    for (let i = 0; i < 4 ; i++){
         events += `
         <div class="event">
-            <a href="${data.eventPage}">
-                <img src="/resources/images/${data.image}" alt="${data.imageAlt}">
-                <p class="tittle">${data.eventName}</p>
+            <a href="${data[i].eventPage}">
+                <img src="/resources/images/events/${data[i].image}" alt="${data[i].imageAlt}">
+                <p class="tittle">${data[i].eventName}</p>
             </a>
         </div>
         `
