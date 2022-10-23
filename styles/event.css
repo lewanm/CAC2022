@@ -85,53 +85,13 @@
   .weather-img {
     width: 40vw;
   }
-
-  .buttons {
-    position: fixed;
-    bottom: 0;
-
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-  }
-
-  .buttons a svg {
-    width: 25px;
-    height: 25px;
-    fill: var(--font-color);
-  }
-
-  .buttons a svg:hover {
-    fill: var(--font-color-selected);
-  }
-
-  .desktop {
-    display: none;
-  }
 }
 
 @media screen and (min-width: 481px) and (max-width: 1280px) {
-  .mobile {
-    display: none;
-  }
-
   .image-container img,
   .detail-container,
   .weather-container {
     border-radius: var(--border-radius);
-  }
-
-  .buttons {
-    position: fixed;
-    top: 0;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-  }
-
-  .buttons a {
-    margin: 0 10px;
   }
 
   .event-container {
@@ -237,26 +197,10 @@
 }
 
 @media screen and (min-width: 1281px) {
-  .mobile {
-    display: none;
-  }
-
   .image-container img,
   .detail-container,
   .weather-container {
     border-radius: var(--border-radius);
-  }
-
-  .buttons {
-    position: fixed;
-    top: 0;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-  }
-
-  .buttons a {
-    margin: 0 10px;
   }
 
   .event-container {
