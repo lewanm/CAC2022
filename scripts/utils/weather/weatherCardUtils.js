@@ -36,7 +36,7 @@ export function getWeather(_data){
         data.icon = 'https://cdn-icons-png.flaticon.com/512/1163/1163657.png'
         break;
       case 53:
-        data.weather = "Lñovizna moderada"
+        data.weather = "Llovizna moderada"
         data.icon = 'https://cdn-icons-png.flaticon.com/512/1163/1163657.png'
         break;
       case 54:
@@ -44,28 +44,19 @@ export function getWeather(_data){
         data.icon = 'https://cdn-icons-png.flaticon.com/512/1163/1163657.png'
         break;
       case 61:
+      case 80:
         data.weather = "Lluvia suave"
         data.icon = 'https://cdn-icons-png.flaticon.com/512/1163/1163626.png'
         break;
       case 63:
+      case 81:
         data.weather = "Lluvia moderada"
         data.icon = 'https://cdn-icons-png.flaticon.com/512/1163/1163626.png'
         break;
-      case 63:
+      case 65:
+      case 82:
         data.weather = "Lluvia intensa"
         data.icon = 'https://cdn-icons-png.flaticon.com/512/1163/1163626.png'
-        break;
-      case 80:
-        data.weather = "modificar texto"
-        data.icon = 'https://cdn-icons-png.flaticon.com/512/1163/1163632.png'
-        break;
-      case 81:
-        data.weather = "modificar texto"
-        data.icon = 'https://cdn-icons-png.flaticon.com/512/1163/1163632.png'
-        break;
-      case 82:
-        data.weather = "modificar texto"
-        data.icon = 'https://cdn-icons-png.flaticon.com/512/1163/1163632.png'
         break;
       case 95: 
         data.weather = "Tormenta electrica"
