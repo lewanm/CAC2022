@@ -28,6 +28,7 @@ header .buttons {
   background-color: var(--navbar-light);
   height: var(--header-height);
   width: 100vw;
+  z-index: 6;
 }
 
 header .buttons a {

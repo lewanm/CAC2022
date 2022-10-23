@@ -1,32 +1,19 @@
+//lo estoy usando en home.js directamente sin importarlo de aca.
+
 export default function getSlideshow(data){
 
-    console.log(data)
-    let finalString = 
+    
+    const labels = `
+    <div class="container slides">
+    <a href="${data[0].eventPage}">
+      <img class="slide-img" src="resources/images/${data[0].image}" alt="${data[0].imageAlt}">
+    </a>
+    <div class="img-txt">
+      ${data[0].eventName}
+    </div>
+    </div>
     `
-    <div id="slides" class="ms-slides" data-delay="8000" data-transition="600">
-        <div class="ms-slides__inner" >
-        
-    `
-    for (let i in data){
-        finalString += `<img src="/resources/images/${data[i].imageName}" alt=${data[i].alt}>`
-    }
 
-    finalString+=
 
-        `</div>
-
-        <ol class="ms-slides__indicators"></ol>
-
-        <a href="#" class="ms-slides__next-button"></a>
-        <a href="#" class="ms-slides__prev-button"></a>
-    </div>`
-
-    return(finalString)
+    return(labels)
 }
-
-
-
-/* 
-<img src="/resources/images/img3.jpg" alt="dandelion">
-<img src="/resources/images/img4.jpg" alt="ladybug">
-<img src="/resources/images/img2.jpg" alt="beetle"> */
