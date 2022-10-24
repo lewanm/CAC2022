@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/form.css">
+    <title>Formularios</title>
+</head>
+
+<body>
+    <header id="header"></header>
+
+    <div class="form-container">
+        <form id="form">
+
+            <div class="tittle">
+                <h2>Ponte en contacto</h2>
+            </div>
+
+            <div id="info-container">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name"placeholder="Ingrese su nombre aqui..."> 
+        
+                <label for="email">Email:</label>
+                <input type="email" id="mail" name="email" placeholder="Ingrese su dirección aqui...">
+                
+                <label for="phone">Telefono:</label>
+                <input type="tel" id="phone" name="phone"placeholder="ingrese su telefono aqui ...."> 
+            </div>
+            
+            <div class="reason-and-detail-container">
+                <div id="reason-container">
+                    <p>
+                        Motivo: 
+                        <div class="option-container" id="radio-selector" ONCHANGE="modifySelection()">
+                            <div>
+                                <input type="radio" name="motivo" id="consulta"  value="1"> 
+                                <label for="consulta">Consulta</label>
+                                
+                            </div>
+                    
+                            <div>
+                                <input type="radio" name="motivo" id="sugerencia" value="2"> 
+                                <label for="sugerencia">Sugerencia</label>
+                            </div>
+                    
+                            <div>
+                                <input type="radio" name="motivo" id="queja"  value="3">
+                                <label for="queja">Queja</label>
+                            </div>
+                        </div>
+                        </p>
+                </div>
+
+                <div id="reason-detail-container">
+                    <label for="reason-detail"></label>
+                    <select id="reason-detail" name="reason-detail" >
+                        <option value="null">Seleccione una opcion</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <div id="comment-container">
+                <label for="comentarios">Comentarios:</label> 
+                <textarea id="comment" name="comentarios" rows="8"></textarea>
+            </div>
+
+            <div id="send-button-container">
+                <input type="submit" value="Enviar"></input>
+            </div>
+
+        </form>
+    </div>
+
+    <script src="../../scripts/components/header-Footer.js"></script>
+    <script src="../scripts/utils/form/modifyReason.js"></script>
+    <script src="../scripts/utils/form/form.js"></script>
+
+</body>
+
+</html>

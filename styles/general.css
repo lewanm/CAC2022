@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  text-decoration: none;
+  font-family: "Raleway", sans-serif;
+}
+
+:root {
+  --main-bg-color: #c9cba3;
+  --main-bg-light: #ffe1a8;
+  --navbar-light: #723d46;
+  --navbar-dark: #472d30;
+
+  --font-color: white;
+  --font-color-selected: lightgray;
+
+  --header-height: 50px;
+  --border-radius: 20px;
+  --border-radius-top: 20px 20px 0 0;
+  --border-radius-bottom: 0 0 20px 20px;
+  --card-margin: 30px;
+}
+
+header .buttons {
+  background-color: var(--navbar-light);
+  height: var(--header-height);
+  width: 100vw;
+  z-index: 6;
+}
+
+header .buttons a {
+  color: var(--font-color);
+}
+
+header .buttons a:hover {
+  color: var(--font-color-selected);
+}
+
+@media screen and (max-width: 480px) {
+  .buttons {
+    position: fixed;
+    bottom: 0;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .buttons a svg {
+    width: 25px;
+    height: 25px;
+    fill: var(--font-color);
+  }
+
+  .buttons a svg:hover {
+    fill: var(--font-color-selected);
+  }
+
+  .desktop {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 1280px) {
+  .mobile {
+    display: none;
+  }
+
+  .buttons {
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .buttons a {
+    margin: 0 10px;
+  }
+}
+
+@media screen and (min-width: 1281px) {
+  .mobile {
+    display: none;
+  }
+
+  .buttons {
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .buttons a {
+    margin: 0 10px;
+  }
+}

@@ -1,0 +1,76 @@
+@import url("general.css");
+
+.event img {
+  width: 100%;
+
+  object-fit: cover;
+  border-radius: var(--border-radius-top);
+}
+.event .tittle {
+  background-color: var(--main-bg-color);
+  border-radius: var(--border-radius-bottom);
+  font-weight: 600;
+  margin-top: -4px;
+  text-align: center;
+  padding: 5px 0;
+}
+
+@media screen and (max-width: 480px) {
+  .events-container {
+    width: 100vw;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .general-slide-container,
+  .event {
+    margin-top: 30px;
+  }
+
+  .events-container {
+    margin-bottom: calc(var(--header-height) + 30px);
+  }
+
+  .event {
+    width: 60%;
+  }
+
+  .event img {
+    height: 200px;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .general-slide-container {
+    margin-top: 80px;
+  }
+
+  .general-slide-container,
+  .events-container {
+    margin-bottom: var(--header-height);
+  }
+
+  .event-section {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+  }
+
+  .events-container {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2%;
+  }
+  .event {
+    width: 49%;
+    margin-bottom: 3%;
+  }
+
+  .event a img {
+    height: 90%;
+  }
+}
