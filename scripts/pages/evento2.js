@@ -6,51 +6,42 @@ import image from '../components/events/imageCard.js'
 import {formateDate} from '../utils/weather/date.js'
 import {obtainCoordinates} from '../utils/weather/coordenates.js'
 
+
+const imgData = {
+    'url' : "/resources/images/events/tgs.jpeg",
+    'alt' : "placeholder event image"
+}
+
 function getDate(days){
     const tomorrow = new Date()
     tomorrow.setDate(tomorrow.getDate() + days )
     return tomorrow.toISOString()
 }
 
-const imgData = {
-    'url' : "https://www.buenosaires.gob.ar/sites/gcaba/files/field/image/conociendo_ba_2_0.jpg",
-    'alt' : "placeholder event image"
-}
-
 const detailData = {
     'entrada' : true,
-    'precio' : 450,
-    'fecha' : getDate(3),
-    'descripcion' : 'Desde la Fundación Cultural Argentino Japonesa que administra nuestro Jardín informamos que el sábado 5 de noviembre de 10 a 18:45 hs recibiremos donaciones y todo tipo de ayuda para enviar a Corrientes.'
+    'precio' :' ¥2,300',
+    'fecha' : getDate(2),
+    'descripcion' : `La mayor feria de videojuegos en Asía se celebrar durante estos días en la capital de Japón. Tokyo Game Show 2022 tendrá lugar entre el jueves 15 de septiembre y el domingo 18. Durante estos días, las grandes desarrolladoras niponas expondrán muchos de sus juegos.`
 }
 
 const mapData = {
-    'url' : null,
-    'lugar' : 'Jardin Japones',
-    'direccion' : 'Av. Casares 3450',
-    'localidad' : 'PALERMO',
+    'url' : 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3242.1960452579256!2d140.03320735109884!3d35.64754123932857!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6022821fd52ebfdf%3A0xcec0c09c4bed45e0!2sMakuhari%20Messe!5e0!3m2!1ses-419!2sar!4v1666573211683!5m2!1ses-419!2sar',
+    'completeUrl': 'https://www.google.com/maps/place/Makuhari+Messe/@35.6475412,140.0332074,17z/data=!3m2!4b1!5s0x602281f5cd7bb0e9:0x5abe79654716ea10!4m5!3m4!1s0x6022821fd52ebfdf:0xcec0c09c4bed45e0!8m2!3d35.6475369!4d140.0354014',
+    'lugar' : 'Makuhari Messe',
+    'direccion' : '2 Chome-1 Nakase, Mihama Ward',
+    'localidad' : 'Chiba, 261-0023, Japón',
 }
 
-const placeHolderMap = "https://www.google.com/maps/place/Nigeria/@9.0338725,8.677457,6z/data=!4m5!3m4!1s0x104e0baf7da48d0d:0x99a8fe4168c50bc8!8m2!3d9.081999!4d8.675277"
-
-const mapDataError = {
-    'url' : null,
-    'lugar' : 'Jardin Japones',
-    'direccion' : 'Av. Casares 3450',
-    'localidad' : 'PALERMO',
-}
-
-
+const placeHolderCoordinates = {'lat':'9.0338725', 'lon': '8.677457'}
+//en este puse las coordenadas a mano, ya que al ser de otro pais era distinto el formato.
 const weatherData = {
-    'coordinates' : mapData.url ? obtainCoordinates(mapData.url) : obtainCoordinates(placeHolderMap),
-    'date' : formateDate(detailData.fecha),
-
+    'coordinates' : {'lat':35.6475412,'lon':140.0332074},
+    'date' : formateDate(detailData.fecha)
 }
-
-//const a = mapData.url ? mapData : mapDataError
 
 document.getElementById("image").innerHTML= image(imgData)
 document.getElementById("detail").innerHTML= detail(detailData)
-//document.getElementById("weather").innerHTML = await weather(weatherData)
+document.getElementById("weather").innerHTML = await weather(weatherData)
 document.getElementById("map").innerHTML = map(mapData)
 

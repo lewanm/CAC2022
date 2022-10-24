@@ -12,19 +12,19 @@ const eventData = [
     },
     evento2 = {
         'eventName':"Tokyo Game Show",
-        'eventPage':'evento1.html',
-        'image' : "tkg.jpeg",
+        'eventPage':'evento2.html',
+        'image' : "tgs.jpeg",
         'imageAlt' : 'placeholder alt'
     },
     evento3 = {
         'eventName':"Feliz cumple Planetario!",
-        'eventPage':'evento1.html',
+        'eventPage':'evento3.html',
         'image' : "planetario.jpg",
         'imageAlt' : 'placeholder alt'
     },
     evento4 = {
         'eventName':"Haloween 2022",
-        'eventPage':'evento1.html',
+        'eventPage':'evento4.html',
         'image' : "haloween.jpg",
         'imageAlt' : 'placeholder alt'
     },
