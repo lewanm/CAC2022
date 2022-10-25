@@ -93,10 +93,10 @@
 }
 @media screen and (min-width: 1125px) {
   .display-left {
-    left: calc(((100vw - 900px) / 2) + 5px);
+    left: calc(((100vw - 1039px) / 2) + 5px);
   }
 
   .display-right {
-    right: calc(((100vw - 900px) / 2) + 5px);
+    right: calc(((100vw - 1039px) / 2) + 5px);
   }
 }
