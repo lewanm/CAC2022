@@ -55,6 +55,7 @@ function checkInputs(){
             'reason':reasonValue,
             'comment':commentValue,
         }
+        form.reset()
     }   
     alert(message)
     console.log(data)
