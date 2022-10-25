@@ -7,4 +7,10 @@ export function formateDate(date){
     return `${year}-${month}-${day}`
 }
 
-export default {formateDate}
+export function getDate(days){
+    const tomorrow = new Date()
+    tomorrow.setDate(tomorrow.getDate() + days )
+    return tomorrow.toISOString()
+}
+
+export default {formateDate, getDate}

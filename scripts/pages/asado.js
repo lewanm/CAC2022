@@ -3,7 +3,7 @@ import map from '../components/events/mapCard.js'
 import weather from '../components/events/weatherCard.js'
 import image from '../components/events/imageCard.js'
 
-import {formateDate} from '../utils/weather/date.js'
+import {formateDate,getDate} from '../utils/weather/date.js'
 import {obtainCoordinates} from '../utils/weather/coordenates.js'
 
 
@@ -16,11 +16,6 @@ const imgData = {
 //dan el pronostico a maximo 7 dias, entonces, mas facil que sea automatico
 //por lo tanto tambien el horario sera automatico, pero queda facil de reemplaza por una api que traiga los datos de eventos reales
 
-function getDate(days){
-    const tomorrow = new Date()
-    tomorrow.setDate(tomorrow.getDate() + days )
-    return tomorrow.toISOString()
-}
 
 const detailData = {
     'entrada' : false,

@@ -3,19 +3,13 @@ import map from '../components/events/mapCard.js'
 import weather from '../components/events/weatherCard.js'
 import image from '../components/events/imageCard.js'
 
-import {formateDate} from '../utils/weather/date.js'
+import {formateDate,getDate} from '../utils/weather/date.js'
 import {obtainCoordinates} from '../utils/weather/coordenates.js'
 
 
 const imgData = {
     'url' : "/resources/images/events/revuelto.jpg",
     'alt' : "placeholder event image"
-}
-
-function getDate(days){
-    const tomorrow = new Date()
-    tomorrow.setDate(tomorrow.getDate() + days )
-    return tomorrow.toISOString()
 }
 
 const detailData = {
@@ -26,11 +20,11 @@ const detailData = {
 }
 
 const mapData = {
-    'url' : 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3343.093624790012!2d-68.4694806!3d-33.0803214!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e4304664888db%3A0xa43a70b2edbcca9f!2sBalcarce%20277%2C%20M5570CCP%20San%20Mart%C3%ADn%2C%20Mendoza!5e0!3m2!1ses-419!2sar!4v1666573706968!5m2!1ses-419!2sar',
-    'completeUrl': 'https://www.google.com/maps/place/Balcarce+277,+M5570CCP+San+Mart%C3%ADn,+Mendoza/@-33.0803214,-68.4694806,17z/data=!4m5!3m4!1s0x967e4304664888db:0xa43a70b2edbcca9f!8m2!3d-33.0803214!4d-68.4694806',
-    'lugar' : 'Petra ',
-    'direccion' : 'Balcarce 277',
-    'localidad' : 'M5570CCP San Martín, Mendoza,',
+    'url' : 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13136.317185764849!2d-58.3684163!3d-34.6021563!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xfd34b93fba734a98!2sLuna%20Park!5e0!3m2!1ses-419!2sar!4v1666660950493!5m2!1ses-419!2sar',
+    'completeUrl': 'https://www.google.com/maps/place/Luna+Park/@-34.6021563,-58.3684163,15z/data=!4m2!3m1!1s0x0:0xfd34b93fba734a98?sa=X&ved=2ahUKEwiP_N3Rm_r6AhXKGLkGHTUJDYsQ_BJ6BAhrEAU',
+    'lugar' : 'Luna Park ',
+    'direccion' : 'Av. Eduardo Madero 470',
+    'localidad' : 'C1106 CABA',
 }
 
 const placeHolderCoordinates = {'lat':'9.0338725', 'lon': '8.677457'}

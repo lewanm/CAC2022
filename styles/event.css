@@ -9,6 +9,10 @@
   background-color: var(--main-bg-light);
 }
 
+.address-name {
+  font-weight: 600;
+}
+
 @media screen and (max-width: 480px) {
   .image-container img,
   .map {
@@ -121,7 +125,7 @@
 
   .image-container img {
     width: 60vw;
-    object-fit: cover;
+    object-fit: fill;
     max-width: calc(60vw / 1.2);
   }
 
@@ -232,7 +236,7 @@
 
   .image-container img {
     width: 100%;
-    object-fit: cover;
+    object-fit: fill;
   }
 
   .detail-container {

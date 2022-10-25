@@ -17,7 +17,7 @@
 
 @media screen and (max-width: 480px) {
   .events-container {
-    width: 100vw;
+    width: 100%;
 
     display: flex;
     flex-direction: column;
@@ -33,7 +33,7 @@
   }
 
   .event {
-    width: 60%;
+    width: 80%;
   }
 
   .event img {
@@ -52,14 +52,17 @@
   }
 
   .event-section {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    max-width: 1300px;
+    height: 50vh;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
   }
 
   .events-container {
     width: 80%;
+    height: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -67,10 +70,11 @@
   }
   .event {
     width: 49%;
+    height: 40%;
     margin-bottom: 3%;
   }
 
   .event a img {
-    height: 90%;
+    height: 100%;
   }
 }

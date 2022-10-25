@@ -4,34 +4,58 @@
 //resources -> images
 
 const eventData = [
-    evento1 = {
+    halloween = {
+        'eventName':"Halloween 2022",
+        'eventPage':'halloween.html',
+        'image' : "halloween.jpg",
+        'imageAlt' : 'placeholder alt'
+    },
+    divorcio = {
+        'eventName':"El divorcio",
+        'eventPage':'divorcio.html',
+        'image' : "divorcio.jpg",
+        'imageAlt' : 'placeholder alt'
+    },
+    aspicia = {
+        'eventName':"Aspicia",
+        'eventPage':'aspicia.html',
+        'image' : "aspicia.jpg",
+        'imageAlt' : 'placeholder alt'
+    },
+    asado = {
         'eventName':"Festival del asado",
-        'eventPage':'evento1.html',
+        'eventPage':'asado.html',
         'image' : "asado.webp",
         'imageAlt' : 'placeholder alt'
     },
-    evento2 = {
+    tgs = {
         'eventName':"Tokyo Game Show",
-        'eventPage':'evento2.html',
+        'eventPage':'tokyo-game-show.html',
         'image' : "tgs.jpeg",
         'imageAlt' : 'placeholder alt'
     },
-    evento3 = {
+    planetario = {
         'eventName':"Feliz cumple Planetario!",
-        'eventPage':'evento3.html',
+        'eventPage':'planetario.html',
         'image' : "planetario.jpg",
         'imageAlt' : 'placeholder alt'
     },
-    evento4 = {
-        'eventName':"Haloween 2022",
-        'eventPage':'evento4.html',
-        'image' : "haloween.jpg",
+    revuelto = {
+        'eventName':"Soy Rada: Revuelto",
+        'eventPage':'revuelto.html',
+        'image' : "revuelto.jpg",
         'imageAlt' : 'placeholder alt'
     },
-    evento5 = {
-        'eventName':"Evento ejemplo",
-        'eventPage':'evento1.html',
-        'image' : "imagen1.png",
+    pailoneta = {
+        'eventName':"La Pailoneta del Humor",
+        'eventPage':'paiolenta.html',
+        'image' : "pailoneta.jpg",
+        'imageAlt' : 'placeholder alt'
+    },
+    gestos = {
+        'eventName':"Los Gestos Bárbaros",
+        'eventPage':'gestos.html',
+        'image' : "gestos.jpg",
         'imageAlt' : 'placeholder alt'
     },
 ]
@@ -39,11 +63,11 @@ const eventData = [
 //Tuve problemas para utilizar un script separado e importarlo, ya que al declararlo en el HTML como type="module"
 //este tardaba en cargar y cargaba primero el otro script, por lo tanto me indicaba que lo de este no existia.
 //tendria que haber hecho la otra funcion asincrona, pero por tema de tiempo decidi dejarlo asi.
-const slideShow = (data) => {
+const slideShow = (data,cantidad) => {
 
     let events = ""
 
-    for (let i = 0; i < 3 ; i++){
+    for (let i = 0; i < cantidad ; i++){
         events += `<div class="container slides">
     <a href="${data[i].eventPage}">
         <img class="slide-img" src="resources/images/events/${data[i].image}" alt="${data[i].imageAlt}">
@@ -60,11 +84,11 @@ const slideShow = (data) => {
     return events
 }
 
-const eventGalery = (data) => {
+const eventGalery = (data,desde,cuantas) => {
 
     let events = ""
 
-    for (let i = 0; i < 4 ; i++){
+    for (let i = desde; i < desde + cuantas ; i++){
         events += `
         <div class="event">
             <a href="${data[i].eventPage}">
@@ -78,7 +102,9 @@ const eventGalery = (data) => {
 }
 
 
-
-document.getElementsByClassName('general-slide-container')[0].innerHTML = slideShow(eventData)
-document.getElementsByClassName('events-container')[0].innerHTML = eventGalery(eventData)
+const cantidadSlide = 3;
+const primeraImagen = 3;
+const cantidadImagenes = 4;
+document.getElementsByClassName('general-slide-container')[0].innerHTML = slideShow(eventData,cantidadSlide)
+document.getElementsByClassName('events-container')[0].innerHTML = eventGalery(eventData,primeraImagen,cantidadImagenes)
 

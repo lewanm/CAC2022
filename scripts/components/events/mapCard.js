@@ -11,8 +11,8 @@ export default function map(data){
         referrerpolicy="no-referrer-when-downgrade">
         </iframe>
         <div class="address-container">
-        <p class="adress-name">${data.lugar}</p>
-        <p class="adress">Dirección: ${data.direccion}, ${data.localidad} </p>
+        <p class="address-name">${data.lugar}</p>
+        <p class="address">Dirección: ${data.direccion}, ${data.localidad} </p>
         </div>`
     )
 }

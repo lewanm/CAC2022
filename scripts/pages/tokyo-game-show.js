@@ -3,19 +3,13 @@ import map from '../components/events/mapCard.js'
 import weather from '../components/events/weatherCard.js'
 import image from '../components/events/imageCard.js'
 
-import {formateDate} from '../utils/weather/date.js'
+import {formateDate,getDate} from '../utils/weather/date.js'
 import {obtainCoordinates} from '../utils/weather/coordenates.js'
 
 
 const imgData = {
     'url' : "/resources/images/events/tgs.jpeg",
     'alt' : "placeholder event image"
-}
-
-function getDate(days){
-    const tomorrow = new Date()
-    tomorrow.setDate(tomorrow.getDate() + days )
-    return tomorrow.toISOString()
 }
 
 const detailData = {
