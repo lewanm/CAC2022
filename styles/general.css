@@ -27,7 +27,7 @@
 header .buttons {
   background-color: var(--navbar-light);
   height: var(--header-height);
-  width: 100vw;
+  width: 100%;
   z-index: 6;
 }
 
@@ -79,7 +79,7 @@ header .buttons a:hover {
   }
 
   .buttons a {
-    margin: 0 10px;
+    margin-right: 20px;
   }
 }
 
